@@ -1,0 +1,41 @@
+{
+    "name": "hgabka/cmf-routing",
+    "type": "library",
+    "description": "Extends the Symfony routing component for dynamic routes and chaining several routers",
+    "keywords": [
+        "routing",
+        "database"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "symfony/routing": "^7.0",
+        "symfony/http-kernel": "^7.0",
+        "psr/log": "^1.0 || ^2.0 || ^3.0"
+    },
+    "require-dev": {
+        "doctrine/annotations": "^1.5",
+        "symfony/phpunit-bridge": "^7.0",
+        "symfony/dependency-injection": "^7.0",
+        "symfony/config": "^7.0",
+        "symfony/event-dispatcher": "^7.0"
+    },
+    "suggest": {
+        "symfony/event-dispatcher": "DynamicRouter can optionally trigger an event at the start of matching. Minimal version ^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Symfony\\Cmf\\Component\\Routing\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Symfony\\Cmf\\Component\\Routing\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "7.x-dev"
+        }
+    }
+}
